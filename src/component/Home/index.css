@@ -1,0 +1,19 @@
+.products-list-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 40vh;
+    overflow-y: scroll;
+    
+}
+
+
+.category-button{
+    background-color: transparent;
+    border-width: 0px;
+    outline: none;
+    cursor: pointer;
+
+}
+
