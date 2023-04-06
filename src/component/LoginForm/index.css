@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 .login-form-main-bg-container{
-    height: 100vh;
+    height: 100%;
     display: flex;
 }
 .login-form-left-container{
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 87vh;
+    height: 87%;
  }
  .logo-image{
     height: 50px;
