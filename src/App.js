@@ -1,5 +1,5 @@
 import {Component} from "react"
-import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import {BrowserRouter,Route,Switch,HashRouter} from 'react-router-dom'
 //import {reactLocalStorage} from 'reactjs-localstorage';
 //import {v4 as uuidv4} from 'uuid'
 import LoginForm from "./component/LoginForm"
@@ -455,7 +455,7 @@ ClickHighlting = () => {
 
 
         }}>
-            <BrowserRouter>
+            <HashRouter>
       
                 <Switch>
 
@@ -474,7 +474,7 @@ ClickHighlting = () => {
                     
                 </Switch> 
             
-            </BrowserRouter>
+            </HashRouter>
         </EcommerceContext.Provider>
     
         )
