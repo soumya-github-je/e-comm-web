@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 .login-form-main-bg-container1{
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +43,7 @@
   }
   .label-element1{
    font-family: "Roboto";
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 7px;
     margin-top: 5px;
 
@@ -51,7 +51,7 @@
   }
   .input-element12{
    font-family: "Roboto";
-    font-size: 11px;
+    font-size: 14px;
     outline: none;
     padding-left: 5px;
     height: 32px;
@@ -84,7 +84,7 @@
    outline: none;
    border-width: 0px;
    margin-left: -35px;
-   
+   font-size: 16px;
    cursor: pointer;
  }
 

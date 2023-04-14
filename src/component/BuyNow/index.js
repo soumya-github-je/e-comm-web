@@ -1,4 +1,5 @@
 import { Component } from "react";
+import {Link} from "react-router-dom"
 import {BiRupee} from "react-icons/bi"
 import Header from "../Header"
 
@@ -18,6 +19,7 @@ class BuyNow extends Component{
         errorMsgBuyNow: '',
         showFinalVectorImag: '',
         textColor: '',
+        continueShopping: false,
 
     }
     
@@ -62,38 +64,24 @@ class BuyNow extends Component{
 
     onSumitForm = event => {
         event.preventDefault()
-        const {nameInput,phoneNoInput,pincodeInput,cityDistrictTownInput,localityInput,addressInput}  = this.state 
-        const nameAndPhoneEmpty = (nameInput && phoneNoInput !== " ")
-        const pinAndLoaclity = (localityInput && pincodeInput !== " ")
-        const addressAndCity = (cityDistrictTownInput && addressInput !== " ")
-        if (nameAndPhoneEmpty){
+        const {nameInput,localityInput,addressInput, phoneNoInput,}  = this.state 
+        
+        if (nameInput && addressInput && localityInput && phoneNoInput !== ""){
             this.setState({
                 showErrorMsgInBuyNow: true,
                 showFinalVectorImag: "https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png",
                 errorMsgBuyNow: "Successfully Ordered Your Product",
-                textColor: "green-color"
-            })
-        }else if (pinAndLoaclity){
-            this.setState({
-                showErrorMsgInBuyNow: true,
-                showFinalVectorImag: "https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png",
-                errorMsgBuyNow: "Successfully Ordered Your Product",
-                textColor: "green-color"
-            })
-        }else if (addressAndCity){
-            this.setState({
-                showErrorMsgInBuyNow: true,
-                showFinalVectorImag: "https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png",
-                errorMsgBuyNow: "Successfully Ordered Your Product",
-                textColor: "green-color"
+                textColor: "green-color",
+                continueShopping: true,
             })
         }
          else{
             this.setState({
                 showErrorMsgInBuyNow: true,
                 showFinalVectorImag: "https://cdn.pixabay.com/photo/2014/04/02/10/26/attention-303861_960_720.png",
-                errorMsgBuyNow: "Pleace enter appropriate data in the given columns",
-                textColor: "black-color"
+                errorMsgBuyNow: "Please enter appropriate data in the given columns",
+                textColor: "black-color",
+                continueShopping: false
             })
         }
         
@@ -104,7 +92,7 @@ class BuyNow extends Component{
         <EcommerceContext.Consumer>
         {value => {
             const {buyNowItem} = value
-            const {showErrorMsgInBuyNow,errorMsgBuyNow,showFinalVectorImag,textColor} = this.state
+            const {showErrorMsgInBuyNow,errorMsgBuyNow,showFinalVectorImag,textColor,continueShopping} = this.state
            const priceDetails = buyNowItem[0].price
            const totalPrice = priceDetails * 75
             
@@ -148,7 +136,11 @@ class BuyNow extends Component{
 
                         <img className="success-image" src={showFinalVectorImag} alt="success message"/>
                         <p className={textColor}>{errorMsgBuyNow}</p>
-                    </div>)}
+                        <Link to="/products">
+                            {continueShopping && <button  className="continue-shoppingbutton">Continue Shopping</button>}
+                   
+                        </Link>
+                         </div>)}
                    
                 </div>
                 </div>
@@ -219,16 +211,16 @@ class BuyNow extends Component{
                                      onChange={this.onChangeCityDistrictTown}
                                      />
                                     <select className="input-element3">
-                                        <option>--Select state--</option>
-                                        <option>Vijayawada</option>
-                                        <option>Guntur</option>
-                                        <option>Visakhapatnam</option>
-                                        <option>Nellore</option>
-                                        <option>Ahemdabad</option>
-                                        <option>Bangalore</option>
-                                        <option>Hyderabad</option>
-                                        <option>Pune</option>
-                                        <option>Chennai</option>
+                                    <option>--Select state--</option>
+                                        <option>Andhra Pradesh</option>
+                                        <option>Telangana</option>
+                                        <option>Tamil Nadu</option>
+                                        <option>Bengalore</option>
+                                        <option>Kerala</option>
+                                        <option>Delhi</option>
+                                        <option>Gujarat</option>
+                                        <option>Goa</option>
+                                        <option>Madhya Pardesh</option>
                                     </select>
                                 </div>
                                 <div>

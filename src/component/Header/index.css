@@ -16,6 +16,7 @@
 .search-container{
     margin-left: -80px;
     margin-top: 4px;
+    display: flex;
 }
 .search-input{
     height: 34px;
@@ -33,7 +34,7 @@
 
 
 .search-icon-button{
-    background-color: transparent;
+    background-color: #fff;
     border-width: 0px;
     outline: none;
     cursor: pointer;
@@ -141,7 +142,7 @@
 .pop-up-text{
     color: #fff;
     font-family: "Roboto";
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 20px;
 
 }

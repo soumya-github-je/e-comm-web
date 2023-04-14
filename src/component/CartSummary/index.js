@@ -23,7 +23,8 @@ const CartSummary = (props) => (
                     <hr className="cart-summary-hr-line1"/>
                     <div className="cart-summary-text-container">
                     <div className="cart-summary-price-details-container">
-                        <p className="cart-summary-price-text">Price ({cartList.length})</p>
+                        {cartList.length === 1 ? <p className="cart-summary-price-text">Price ({cartList.length} item) </p> : <p className="cart-summary-price-text">Price ({cartList.length} items)</p>}
+                        
                         <div className="cart-summary-rupee-icon-cotainer">
                         <BiRupee className="cart-summary-icon1"/>
                         <p className="cart-summary-price">{total}</p>

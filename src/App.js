@@ -44,7 +44,7 @@ class App extends Component{
         image3Input: '',
         image4Input: '',
         newList: [],
-        
+        isShowAllProducts: false,
         
     }
 
@@ -365,6 +365,12 @@ submittingForm = async event => {
   }))
 }
 
+ClickHighlting = () => {
+  this.setState(prevState => ({
+    isShowAllProducts: !prevState.isShowAllProducts,
+  }))
+}
+
 
     render(){
         const {
@@ -382,7 +388,7 @@ submittingForm = async event => {
           stockInput,
           discountInput,
           categoryInput,
-          
+          isShowAllProducts,
           image1Input,
           image2Input,
           image3Input,
@@ -398,7 +404,7 @@ submittingForm = async event => {
             activeCategoryId,
             showAddingProduct,
             categoriesList,
-            
+            isShowAllProducts,
             searchInput,
             changingCategory: this.changingCategory,
             changingSearchInput: this.changingSearchInput,
@@ -443,6 +449,7 @@ submittingForm = async event => {
             onChangeImage4: this.onChangeImage4,
             clickingCategory: this.clickingSearchButton,
             clickingPostButton: this.clickingPostButton,
+            ClickHighlting: this.ClickHighlting,
             categoriesProducts,
             searchProductsList,
 

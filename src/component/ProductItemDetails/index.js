@@ -157,7 +157,7 @@ class ProductItemDetails extends Component{
                                     <Link to="/products" className="nav-link">
                                         <div className="nav-home-container">
                                             <VscChevronLeft className="nav-home-icon"/>
-                                            <p className="home-text">Home</p>
+                                            <p className="home-text">All products</p>
                                         </div>
                                     </Link>
                                     <div className="text-container-main">
@@ -175,10 +175,10 @@ class ProductItemDetails extends Component{
                                         
                                         <p className="brand-text">Brand of the Product is <span className="span-brand-teaxt">{brand}</span></p>
                                         <p className="discount-percentage-text">Discount percentage is <span className="span-brand-teaxt">{discountPercentage}</span>% off</p>
-                                        <p className="category-text-products">Category of the Product <span className="span-brand-teaxt">{category}</span> </p>
-                                        <p className="stock-text">Available Stock <span className="span-brand-teaxt">{stock}</span> </p>
+                                        <p className="category-text-products">Category of the Product: <span className="span-brand-teaxt">{category}</span> </p>
+                                        <p className="stock-text">Available Stock: <span className="span-brand-teaxt">{stock}</span> </p>
                                         <div className="price-container">
-                                            <p className="price-text-products">Price </p>
+                                            <p className="price-text-products">Price:</p>
                                             <BiRupee className="bi-ripee-icon"/>
                                             <p className="span-brand-teaxt">{price*75}</p>
                                         </div>

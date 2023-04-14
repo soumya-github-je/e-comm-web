@@ -1,12 +1,13 @@
 .categories-list-container{
     list-style-type: none;
-    margin-right: 15px;
+    margin-right: 12px;
     display: flex;
 }
 
 .categories-ul-list-container{
     display: flex;
     height: 2%;
+
 }
 .and-up {
     font-size: 11px;
@@ -22,5 +23,6 @@
 }
 
 .nav-icon{
-margin-top: 3px;
+margin-top: 5px;
+font-size: 10px;
 }

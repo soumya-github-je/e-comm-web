@@ -7,6 +7,8 @@ const ProductItem = props => {
     
 
     return(
+        <>
+        {(itemDetails.id > 1 && itemDetails.id !== 22) &&
         <li className="list-container">
             <Link to={`/products/${id}`} className="nav-link">
             <div className="css-effect-hover">
@@ -18,7 +20,10 @@ const ProductItem = props => {
             
             </div>
             </Link>
-        </li>
+        </li>}
+        
+        </>
+        
     )
 }
 

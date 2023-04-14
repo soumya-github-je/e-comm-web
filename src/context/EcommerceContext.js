@@ -31,7 +31,8 @@ const EcommerceContext = React.createContext({
   image3Input: '',
   image4Input: '',
   newList: [],
-  
+  isShowAllProducts: false,
+  ClickHighlting: () => {},
   onChangeTitle: () => {},
   onChangeDesacription: () => {},
   onChangePrice: () => {},

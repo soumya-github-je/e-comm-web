@@ -30,6 +30,8 @@ class Home extends Component{
                         <ul className="products-list-container">
                             {allProductsList.map(eachItem => (
                                 <ProductItem itemDetails= {eachItem} key={eachItem.id}/>
+                                // { eachItem.id >= 2 ? <ProductItem itemDetails= {eachItem} key={eachItem.id}/>:null}
+
                             ))}
                         </ul>
                     </div>

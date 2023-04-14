@@ -6,7 +6,7 @@
 }
 .buynow-main-contanier{
     display: flex;
-    height: 91%;
+    height: 90vh;
     
 }
 .form-main-container{
@@ -192,7 +192,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 45%;
+    height: 45vh;
 }
 .success-image{
     height: 70px;
@@ -209,4 +209,18 @@
     padding-left: 130px;
     
     
+}
+.continue-shoppingbutton{
+    margin-top: 10px;
+    height: 35px;
+    width: 130px;
+    outline: none;
+    cursor: pointer;
+    border-width: 0px;
+    border-radius: 5px;
+    background-color: #0767f7;
+    color: #fff;
+    font-family: "Roboto";
+    
+
 }

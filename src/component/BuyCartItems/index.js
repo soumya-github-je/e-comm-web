@@ -1,4 +1,5 @@
 import { Component } from "react";
+import {Link} from "react-router-dom"
 import Header from "../Header"
 import CartSummary  from "../CartSummary";
 import "./index.css"
@@ -15,6 +16,7 @@ class BuyCartItems extends Component{
         errorMsgBuyNow: '',
         showFinalVectorImag: '',
         textColor: '',
+        continueShopping: false,
 
     }
     
@@ -59,47 +61,31 @@ class BuyCartItems extends Component{
 
     onSumitForm = event => {
         event.preventDefault()
-        const {nameInput,phoneNoInput,pincodeInput,cityDistrictTownInput,localityInput,addressInput}  = this.state 
-        const nameAndPhoneEmpty = (nameInput && phoneNoInput !== " ")
-        const pinAndLoaclity = (localityInput && pincodeInput !== " ")
-        const addressAndCity = (cityDistrictTownInput && addressInput !== " ")
-        if (nameAndPhoneEmpty){
+        const {nameInput,phoneNoInput,localityInput,addressInput}  = this.state 
+        if (nameInput && addressInput && localityInput && phoneNoInput !== ""){
             this.setState({
                 showErrorMsgInBuyNow: true,
                 showFinalVectorImag: "https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png",
-                errorMsgBuyNow: "Successfully Ordered Your Products",
-                textColor: "green-color"
-            })
-        }else if (pinAndLoaclity){
-            this.setState({
-                showErrorMsgInBuyNow: true,
-                showFinalVectorImag: "https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png",
-                errorMsgBuyNow: "Successfully Ordered Your Products",
-                textColor: "green-color"
-            })
-        }else if (addressAndCity){
-            this.setState({
-                showErrorMsgInBuyNow: true,
-                showFinalVectorImag: "https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png",
-                errorMsgBuyNow: "Successfully Ordered Your Products",
-                textColor: "green-color"
+                errorMsgBuyNow: "Successfully Ordered Your Product",
+                textColor: "green-color",
+                continueShopping: true,
             })
         }
          else{
             this.setState({
                 showErrorMsgInBuyNow: true,
                 showFinalVectorImag: "https://cdn.pixabay.com/photo/2014/04/02/10/26/attention-303861_960_720.png",
-                errorMsgBuyNow: "Pleace enter appropriate data in the given columns",
-                textColor: "black-color"
+                errorMsgBuyNow: "Please enter appropriate data in the given columns",
+                textColor: "black-color",
+                continueShopping: false
             })
         }
-        
         
     }
     
 
     renderSummaryPrices = () => {
-        const {showErrorMsgInBuyNow,errorMsgBuyNow,showFinalVectorImag,textColor} = this.state
+        const {showErrorMsgInBuyNow,errorMsgBuyNow,showFinalVectorImag,textColor, continueShopping} = this.state
         return(
             <div className="buy-now-main-bg-container">
             <CartSummary/>
@@ -107,6 +93,10 @@ class BuyCartItems extends Component{
 
                         <img className="success-image" src={showFinalVectorImag} alt="success message"/>
                         <p className={textColor}>{errorMsgBuyNow}</p>
+                        <Link to="/products">
+                            {continueShopping && <button  className="continue-shoppingbutton">Continue Shopping</button>}
+                   
+                        </Link>
                     </div>)}
         </div>
         
