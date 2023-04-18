@@ -1,8 +1,27 @@
-.categories-list-container{
-    list-style-type: none;
-    margin-right: 12px;
-    display: flex;
+@media screen and (max-width: 600px){
+    .categories-list-container{
+        list-style-type: none;
+        margin-right: 12px;
+        display: flex;
+        width: 90%;
+        
+    }
+    .categories-ul-list-container{
+        display: flex;
+        height: 2%;
+        overflow-x: scroll;
+    }
+    
 }
+@media not screen  and (max-width: 600px){
+    .categories-list-container{
+        list-style-type: none;
+        margin-right: 12px;
+        display: flex;
+    }
+    
+}
+
 
 .categories-ul-list-container{
     display: flex;

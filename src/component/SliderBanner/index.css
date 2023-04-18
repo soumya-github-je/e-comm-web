@@ -7,6 +7,11 @@
     width: 100%!important;
 }*/
 
+@media screen and (max-width: 600px){
+    .slider-container{
+        display: none
+    }
+}
 .slider-container {
     margin-top: -30px;
     padding: 40px;

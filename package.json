@@ -1,12 +1,13 @@
 {
-  "homepage": "https://github.com/soumya-github-je/e-com-website-react.git",
   "name": "my-app",
+  "homepage": "https://soumya-github-je.github.io/e-comm-web/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
@@ -18,50 +19,37 @@
     "reactjs-popup": "^2.0.5",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
-    },
-  
-  "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject",
-      "predepoly": "npm run build",
-      "deploy": "gh-pages -d build"
-
-    },
-  
-  "eslintConfig": {
-  
-    
-  "extends": [
-    "react-app",
-    "react-app/jest"
-  ]
-  
   },
-  
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "browserslist": {
-  
-    
-  "production": [
+    "production": [
       ">0.2%",
       "not dead",
       "not op_mini all"
-  ],
-  
-    
-  "development": [
-     "last 1 chrome version",
+    ],
+    "development": [
+      "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
   },
-  
   "devDependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "gh-pages": "^5.0.0",
     "json-server": "^0.17.2",
     "json-server-auth": "^2.1.0"
-    }
+  }
 }
